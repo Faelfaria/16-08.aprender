@@ -1,0 +1,91 @@
+.scroll-container {
+    position: relative;
+    padding: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #d8e3ed;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.arrow-left2,
+.arrow-right2,
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    color: #f5f5f5;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: .7;
+    transition: all 600ms ease-in-out;
+}
+
+.arrow-right2,
+.arrow-right {
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.arrow-left2:hover,
+.arrow-right2:hover,
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 2;
+}
+
+.position {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.tamanho img {
+    width: 200px;
+}
+
+.item2,
+.item {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    opacity: .6;
+    transition: all 600ms ease-in-out;
+}
+
+.current-item,
+.current-item2 {
+    opacity: 1;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+    -ms-overflow-style: none !important;
+    /* IE and Edge */
+    scrollbar-width: none !important;
+    /* Firefox */
+}
